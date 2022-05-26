@@ -1,0 +1,22 @@
+# Author: Samarth Kanungo
+# Description: This docker-compose file will create prometheus and grafana docker containers.
+
+version: "3.7"
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - /d/SMK/docker/docker-compose/prometheus+grafana/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /d/SMK/docker/docker-compose/prometheus+grafana/prometheus-data:/prometheus
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana:latest
+    volumes:
+      - /d/SMK/docker/docker-compose/prometheus+grafana/grafana.ini:/etc/grafana/grafana.ini
+      - /d/SMK/docker/docker-compose/prometheus+grafana/grafana-data:/var/lib/grafana
+      - /d/SMK/docker/docker-compose/prometheus+grafana/grafana-datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml
+    ports:
+     - 3000:3000
+    links:
+     - prometheus
