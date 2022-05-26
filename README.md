@@ -20,13 +20,13 @@ Ethernet adapter vEthernet (WSL):
    Default Gateway . . . . . . . . . :
 
 ```
-2. Check if the windows exporter is functional by running http://172.23.96.1:9182/ in browser. It should show windows_exporter metrics exposed at port 9182.
+3. Check if the windows exporter is functional by running http://172.23.96.1:9182/ in browser. It should show windows_exporter metrics exposed at port 9182.
 
-3. Update prometheus.yml line 30 and add the above URL of windows_exporter to add the target.
+4. Update prometheus.yml line 30 and add the above URL of windows_exporter to add the target.
 
-4. Create 2 directories named prometheus-data and grafana-data for data persistance.
+5. Create 2 directories named prometheus-data and grafana-data for data persistance.
 
-5. check the files are present in same directory. 
+6. check the files are present in same directory. 
 ```
 
 -rw-r--r-- 1 sam03 197609    1436 May 26 20:00 README.md
@@ -41,24 +41,24 @@ drwxr-xr-x 1 sam03 197609       0 May 26 20:13 prometheus-data/
 
 ```
 
-6. update grafana username and password in grafana.ini line 248.
+7. update grafana username and password in grafana.ini line 248.
 
-7. Make docker compose up by command
+8. Make docker compose up by command
 ```
 
 docker-compose up
 
 ```
 
-8. Check if both the containers are up and running by 
+9. Check if both the containers are up and running by 
 ```
 
 docker-compose ps
 
 ```
 
-9. Go to browser and open grafana by localhost:3000
+10. Go to browser and open grafana by localhost:3000
 
-10. Import dashboard JSON given present in current directory.
+11. Import dashboard JSON given present in current directory.
 
-11. Save dashboard and monitor it.
+12. Save dashboard and monitor it.
