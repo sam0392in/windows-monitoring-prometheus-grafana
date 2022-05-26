@@ -1,4 +1,4 @@
-# Setup Windows Monitoring on Prometheus & Grafana
+# Setup Windows Monitoring with Prometheus & Grafana
 
 ## Prerequisites
 - Docker Desktop Running.
