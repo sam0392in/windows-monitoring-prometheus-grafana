@@ -15,12 +15,12 @@ Ethernet adapter vEthernet (WSL):
 
    Connection-specific DNS Suffix  . :
    Link-local IPv6 Address . . . . . : fe80::74aa:c25f:7e02:4034%97
-   IPv4 Address. . . . . . . . . . . : 172.23.96.1
+   IPv4 Address. . . . . . . . . . . : 172.23.92.1
    Subnet Mask . . . . . . . . . . . : 255.255.240.0
    Default Gateway . . . . . . . . . :
 
 ```
-3. Check if the windows exporter is functional by running http://172.23.96.1:9182/ in browser. It should show windows_exporter metrics exposed at port 9182.
+3. Check if the windows exporter is functional by running http://172.23.92.1:9182/ in browser. It should show windows_exporter metrics exposed at port 9182.
 
 4. Update prometheus.yml line 30 and add the above URL of windows_exporter to add the target.
 
